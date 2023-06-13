@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Template</title>
+<style type="text/css">
+	body {
+		margin: 0;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+
+	.emailContainer {
+		width: 80%;
+		background-color: rgb(237,239,242);
+        max-width: 800px;
+		min-width: 300px;
+	}
+
+    .hero-container{
+        background-color: rgb(225,9,10);
+    }
+
+	.hero {
+		width: 30%;
+		margin-left: 35%;
+		margin-top: 40px;
+        margin-bottom: 40px;
+	}
+
+    .hero-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        background-color: rgb(209,0,0);
+        font-weight: bold;
+        font-size: clamp(12px, calc(2px + 1.5vw), 20px);
+    }
+
+    .hero-button-link {
+        text-decoration: none;
+        color: white;
+	}
+
+    .main-container {
+    position: relative;
+    width: 98%;
+    height: 250px;
+    margin: 20px auto;
+    overflow: hidden;
+    }
+
+    .main-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .main-container-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5); /* Adjust the alpha value (0.5) to control transparency */
+    z-index: 1;
+    }
+
+    .main-container-info-left {
+        position: absolute;
+        top: 0;
+        right: 50;
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .main-container-info-text {
+        color: white;
+        text-align: center;
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-container-info-text-left{
+        color: white;
+        text-align: center;
+        margin-top: 90px;
+        font-weight: bold;
+        font-size: clamp(25px, calc(2px + 1.5vw), 60px);
+    }
+
+    .main-container-info-button {
+        background-color: white;
+        width: 62%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 15%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .main-container-info-link {
+        text-decoration: none;
+        color: red;
+        font-weight: bold;
+        font-size: clamp(10px, calc(2px + 1.5vw), 20px);
+    }
+
+    .pic-container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+
+    }
+
+    .pic-container img {
+        width: 90%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .article-container {
+        display: flex;
+        width: 98%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+    }
+
+
+    .image-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+    .banner-container {
+        position: relative;
+    }
+
+    .banner {
+        background-color: white;
+        width: 40%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        position: absolute;
+        color: red;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        font-size: clamp(10px, calc(2px + 1.5vw), 20px);
+    }
+
+    .banner-bottom {
+        background-color: red;
+        width: 40%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        position: absolute;
+        color: white;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        font-weight: bold;
+        font-size: clamp(8px, calc(2px + 1.5vw), 20px);
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        object-fit: cover;
+        margin-top: -10px;
+
+        }
+
+    .image-container div {
+        background-color: white;
+        text-align: center;
+        padding-top: 5px;
+        width: 98%;
+        height: 100%;
+        object-fit: cover;
+        padding-bottom: 20px;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .image-container h3 {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: clamp(20px, calc(2px + 1.5vw), 50px);
+        margin-top: -5px;
+
+    }
+
+    .image-container p {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: clamp(12px, calc(2px + 1.5vw), 20px);
+
+    }
+
+    .price {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 6%;
+        margin-bottom: 10px;
+
+    }
+
+    .original-price {
+        text-decoration: line-through;
+        color: grey;
+        display: flex;
+        justify-content: flex-end;
+        font-size: clamp(10px, calc(2px + 1.5vw), 20px);
+        margin-right: 5px;
+    }
+
+    .new-price {
+        color: red;
+        font-weight: bold;
+        font-size: clamp(30px, calc(10px + 1.5vw), 50px);
+        display: flex;
+        justify-content: center;
+        align-items: top;
+    }
+
+    .price-button {
+        padding: 10px;
+        background-color: rgb(225,9,10);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        color: white;
+        font-weight: bold;
+        font-size: clamp(20px, calc(2px + 1.5vw), 50px);
+
+    }
+    
+    .buy-link {
+        text-decoration: none;
+    }
+
+	.social {
+		display: flex;
+		justify-content: center;
+	}
+
+	.fa-brands {
+		margin: 20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.footer {
+		background-color: rgb(225,9,10);
+		font-size: 12px;
+        color: white;
+        margin-top: 20px;
+	}
+
+    .footer-title-img{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .footer-title {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        font-size: clamp(30px, calc(2px + 1.5vw), 40px);
+        text-align: center;
+    }
+
+	.copyright {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+        text-align: center;
+	}
+
+	.emailreason {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+        text-align: center;
+	}
+
+	.mailingaddress {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+
+    hr {
+        border: solid 1px rgb(114,186,147);
+    }
+
+</style>
+</head>
+<body>
+	<div class="emailContainer">
+		<div class="hero-container">
+			<a href="" target="_blank" rel="noopener noreferrer">
+				<img class="hero" src="img/logo.PNG" alt="logo">
+			</a>
+		</div>
+        <div class="hero-links">
+            <div class="hero-button"><a class="hero-button-link" href="" target="_blank" rel="noopener noreferrer">Special Offers</a></div>
+            <div class="hero-button"><a class="hero-button-link" href="" target="_blank" rel="noopener noreferrer">What's New</a></div>
+            <div class="hero-button"><a class="hero-button-link" href="" target="_blank" rel="noopener noreferrer">For Two</a></div>
+        </div>
+        <div class="main-container">
+            <img src="img/beach-g7fd473771_1280.jpg">
+            <div class="main-container-info"><div class="main-container-info-text">CUSTOMER<br><b>FAVOURITES</b><br>UP TO <b>50% OFF</b></div><br><a class="main-container-info-link" href="" target="_blank" rel="noopener noreferrer"><div class="main-container-info-button">EXPLORE NOW ></div></a></div>
+            <div class="main-container-info-left"><div class="main-container-info-text-left">experience this</div>
+        </div>
+	</div>
+    <div class="pic-container">
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="img/days out in paris.png" alt="paris"></a>
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="img/hotel breaks.png" alt="hotel"></a>
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="img/adventure.png" alt="adventure"></a>
+    </div>
+    <div class="article-container">
+        <div class="article">
+            <div class="image-container">
+                <div class="banner-container">
+                    <span class="banner">SAVE 26%</span>
+                    <img src="img/shibuyasky-gb9b0293d3_1280.jpg">
+                    <span class="banner-bottom">EXCLUSIVE</span>
+                </div>
+                <div>
+                    <h3>View of Shibuya with a Three Course Meal for Two</h3>
+                    <p>As part of this sensational experience, you'll also be welcomed into the award-winning restaurant of Hiroshi Matsutani.</p>
+                    <span class="price"><span class="original-price">$150.00</span><span class="new-price">$111.00</span></span>
+                    <a class="buy-link" href="" target="_blank" rel="noopener noreferrer"><span class="price-button">buy now</span></a>
+                    </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="image-container">
+                <div class="banner-container">
+                    <span class="banner">SAVE 22%</span>
+                    <img src="img/mustang-g761841c96_1280.jpg">
+                    <span class="banner-bottom">9 MILES</span>
+                </div>
+            <div>
+                <h3>Supercar Experience with High Speed Passenger Ride and Photo</h3>
+                <p>With so many incredible supercars to choose from, the hardest part of your day will be choosing which ones to drive!</p>
+                <span class="price"><span class="original-price">$140.00</span><span class="new-price">$109.00</span></span>
+                <a class="buy-link" href="" target="_blank" rel="noopener noreferrer"><span class="price-button">buy now</span></a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-container">
+        <div class="article">
+            <div class="image-container">
+                <div class="banner-container">
+                    <span class="banner">SAVE 50%</span>
+                    <img src="img/thames.png">
+                </div>
+                <div>
+                    <h3>Thames Cruise Sightseeing River Red Rover Ticket for Two</h3>
+                    <p>Take a friend or loved one aboard a City Cruises hop-on hop-off boat and enjoy the sights of London together, from the world-famous River Thames.</p>
+                    <span class="price"><span class="original-price">$37.00</span><span class="new-price">$18.50</span></span>
+                    <a class="buy-link" href="" target="_blank" rel="noopener noreferrer"><span class="price-button">buy now</span></a>
+                    </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="image-container">
+                <div class="banner-container">
+                    <span class="banner">SAVE 50%</span>
+                    <img src="img/brew.png">
+                </div>
+            <div>
+                <h3>Winery and Brewery Tour for Two with Tastings</h3>
+                <p>The informative tour will be followed a tutored tasting session in th cellar shop where you can try any of the available products.</p>
+                <span class="price"><span class="original-price">$8.00</span><span class="new-price">$9.00</span></span>
+                <a class="buy-link" href="" target="_blank" rel="noopener noreferrer"><span class="price-button">buy now</span></a>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-title-img">
+            <div class="footer-title">
+                Discover the Essence of Travel, Experience it in its Purest Form!
+            </div>
+        </div>
+        <div class="social">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-pinterest fa-2xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter fa-2xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f fa-2xl" style="color: #ffffff;"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            <i>Copyright © 2023 TravelPure, All rights reserved.</i>
+        </div>
+        <div class="emailreason">
+            You are receiving this email because you opted in via our website.
+        </div>
+        <div class="mailingaddress">
+            Our mailing address is:<br>TravelPure<br>55 Rue du Faubourg<br>Paris 75008
+        </div>
+    </div>
+	<script src="https://kit.fontawesome.com/2a249cc1b2.js" crossorigin="anonymous"></script>
+</body>
+</html>
